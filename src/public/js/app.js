@@ -114,6 +114,7 @@ welcomeForm.addEventListener("submit", handleWelcomeSubmit);
 // Socket Code
 socket.on("welcome", async () => {
   const offer = await myPeerConnection.createOffer();
+<<<<<<< HEAD
   myPeerConnection.setLocalDescription(offer);
   console.log("sent the offer");
   socket.emit("offer", offer, roomName);
@@ -123,6 +124,11 @@ socket.on("offer", offer => {
   console.log(offer);
 })
 
+=======
+  console.log(offer);
+});
+
+>>>>>>> 2c8a9d7b7793af2e6c18734ee0d0216e3cdfbc16
 // RTC Code
 function makeConnection() {
   myPeerConnection = new RTCPeerConnection();
